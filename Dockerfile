@@ -1,4 +1,4 @@
-FROM maven:latest as target
+FROM maven:latest
 
 ENV ftp_proxy "http://proxy.autozone.com:8080/"
 ENV http_proxy "http://proxy.autozone.com:8080/"
@@ -14,8 +14,4 @@ COPY src/ ./src
 
 RUN mvn package
 
-FROM openjdk:8
-
-CMD ["java","-jar","/app/docker_project-0.0.1-RELEASE.jar","0.0.0.0"]
-
-COPY --from=target /usr/src/app/target/docker_project-0.0.1-SNAPSHOT-all.jar /app/docker_project-0.0.1-RELEASE.jar
+CMD ["java","-jar","/app/docker_project-0.0.1-SNAPSHOT-all.jar","0.0.0.0"]

@@ -54,13 +54,12 @@
               </transformers>
               <artifactSet>
               </artifactSet>
-              <outputFile>${project.build.directory}/${project.artifactId}-${project.version}-all.jar
+              <outputFile>/app/${project.artifactId}-${project.version}-all.jar
               </outputFile>
             </configuration>
           </execution>
         </executions>
       </plugin>
-      
     </plugins>
   </build>
   <dependencies>
