@@ -1,8 +1,8 @@
 FROM maven:latest
 
-ENV ftp_proxy "http://proxy.autozone.com:8080/"
-ENV http_proxy "http://proxy.autozone.com:8080/"
-ENV https_proxy "http://proxy.autozone.com:8080/"
+ENV ftp_proxy "http://proxy.example.com:8080/"
+ENV http_proxy "http://proxy.example.com:8080/"
+ENV https_proxy "http://proxy.example.com:8080/"
 
 COPY ./settings-docker.xml /usr/share/maven/conf/settings.xml
 
